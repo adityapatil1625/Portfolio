@@ -22,7 +22,7 @@ const projects = [
       "Real-time Firestore data handling",
       "Responsive and modern UI",
     ],
-    github: "https://github.com",
+    github: "https://github.com/siddeshwardm/E-commerce",
     live: "#",
     featured: true,
   },
@@ -44,7 +44,7 @@ const projects = [
       "AI-powered receipt scanning",
       "Interactive spending charts and analytics",
     ],
-    github: "https://github.com",
+    github: "https://github.com/siddeshwardm/Budget_Manager",
     live: "#",
     featured: true,
   },
@@ -58,7 +58,7 @@ const projects = [
       "Form validation best practices",
       "User session management",
     ],
-    github: "https://github.com",
+    github: "https://github.com/siddeshwardm/authentication-firebase",
     live: "#",
     featured: false,
   },
@@ -168,7 +168,7 @@ export const Projects = () => {
           >
             <Button variant="outline" size="lg" asChild>
               <a
-                href="https://github.com"
+                href="https://github.com/siddeshwardm"
                 target="_blank"
                 rel="noopener noreferrer"
               >

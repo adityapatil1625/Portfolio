@@ -101,7 +101,7 @@ export const Hero = () => {
             className="flex items-center justify-center gap-6"
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/siddeshwardm"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -110,7 +110,7 @@ export const Hero = () => {
               <Github className="h-6 w-6" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/siddeshwar-madargave-945092307/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -119,7 +119,7 @@ export const Hero = () => {
               <Linkedin className="h-6 w-6" />
             </motion.a>
             <motion.a
-              href="mailto:siddeshwar@example.com"
+              href="mailto:siddeshwarmadargave6@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
               whileHover={{ scale: 1.2, y: -2 }}
             >
