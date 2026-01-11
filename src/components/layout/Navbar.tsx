@@ -34,26 +34,22 @@ export const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border ${
         isScrolled ? "glass py-3" : "py-5"
       }`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
-        <motion.a
-          href="#"
-          className="text-xl font-bold text-gradient"
-          whileHover={{ scale: 1.05 }}
-        >
-          SM
-        </motion.a>
-
+      <nav className="container mx-auto px-6 flex items-center gap-6">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex flex-1 items-center justify-center gap-8 px-4 py-2 rounded-lg">
           {navLinks.map((link) => (
             <motion.a
               key={link.name}
               href={link.href}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium"
+              className={`transition-colors duration-300 text-sm font-medium ${
+                ["About", "Skills", "Experience", "Projects", "Contact"].includes(link.name)
+                  ? "border border-border px-3 py-1 rounded-lg text-muted-foreground hover:text-primary"
+                  : "text-muted-foreground hover:text-primary"
+              }`}
               whileHover={{ y: -2 }}
             >
               {link.name}
@@ -61,7 +57,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4 ml-auto px-3 py-2 rounded-lg">
           <Button
             variant="ghost"
             size="icon"
@@ -70,13 +66,10 @@ export const Navbar = () => {
           >
             {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
-          <Button variant="hero" size="sm" asChild>
-            <a href="#contact">Hire Me</a>
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-2 ml-auto px-3 py-2 rounded-lg">
           <Button
             variant="ghost"
             size="icon"
@@ -115,9 +108,6 @@ export const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="hero" className="mt-4" asChild>
-                <a href="#contact">Hire Me</a>
-              </Button>
             </div>
           </motion.div>
         )}

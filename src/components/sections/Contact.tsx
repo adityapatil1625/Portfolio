@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Mail, MapPin, Send, Linkedin, Github, Phone } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,20 +14,45 @@ export const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("qohcf0P70Vw8xHz70");
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message Sent! ✨",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const result = await emailjs.send(
+        "service_hfl5x73",
+        "template_m6peohq",
+        {
+          from_name: formData.get("name"),
+          from_email: formData.get("email"),
+          subject: formData.get("subject"),
+          message: formData.get("message"),
+          to_email: "siddeshwarmadargave6@gmail.com",
+        }
+      );
+
+      if (result.status === 200) {
+        toast({
+          title: "Message Sent! ✨",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        (e.target as HTMLFormElement).reset();
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [

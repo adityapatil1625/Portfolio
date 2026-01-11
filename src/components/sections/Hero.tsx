@@ -75,10 +75,11 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-wrap items-center justify-center gap-4 mb-12"
           >
+
             <Button variant="hero" size="lg" asChild>
               <a href="#contact">
                 <Mail className="mr-2 h-5 w-5" />
-                Hire Me
+                Drop a Chat
               </a>
             </Button>
             <Button variant="heroOutline" size="lg" asChild>
@@ -87,7 +88,7 @@ export const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="/resume.pdf" download>
+              <a href="/resume (2).pdf" target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-5 w-5" />
                 Resume
               </a>

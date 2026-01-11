@@ -55,20 +55,16 @@ export const Experience = () => {
 
           {/* Experience Timeline */}
           <div className="relative mb-20">
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-1/2" />
-
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="relative pl-8 md:pl-0 md:w-1/2 md:odd:pr-12 md:even:pl-12 md:even:ml-auto mb-12"
+                className="mb-12"
               >
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-auto md:odd:right-0 md:even:left-0 top-0 w-4 h-4 rounded-full bg-primary glow-primary md:odd:-right-2 md:even:-left-2 md:-translate-y-0" />
 
-                <div className="glass glass-hover rounded-2xl p-6">
+                <div className="glass glass-hover rounded-2xl p-4 w-fit">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-semibold text-primary">
