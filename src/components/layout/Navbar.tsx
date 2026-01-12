@@ -17,9 +17,7 @@ export const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,22 +32,30 @@ export const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-border ${
-        isScrolled ? "glass py-3" : "py-5"
-      }`}
+      className={`fixed top-0 left-0 right-0 h-16 z-50 border-b border-border transition-all duration-300
+        ${isScrolled ? "glass" : "bg-background/80 backdrop-blur-md"}`}
     >
-      <nav className="container mx-auto px-6 flex items-center gap-6">
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 items-center justify-center gap-8 px-4 py-2 rounded-lg">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+
+        {/* LEFT SIDE – Theme Toggle */}
+        <div className="flex items-center gap-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="rounded-full"
+          >
+            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </Button>
+        </div>
+
+        {/* CENTER – Desktop Links */}
+        <div className="hidden md:flex flex-1 justify-center gap-8">
           {navLinks.map((link) => (
             <motion.a
               key={link.name}
               href={link.href}
-              className={`transition-colors duration-300 text-sm font-medium ${
-                ["About", "Skills", "Experience", "Projects", "Contact"].includes(link.name)
-                  ? "border border-border px-3 py-1 rounded-lg text-muted-foreground hover:text-primary"
-                  : "text-muted-foreground hover:text-primary"
-              }`}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-3 py-1 rounded-lg border border-border"
               whileHover={{ y: -2 }}
             >
               {link.name}
@@ -57,27 +63,8 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-4 ml-auto px-3 py-2 rounded-lg">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center gap-2 ml-auto px-3 py-2 rounded-lg">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
+        {/* RIGHT SIDE – Mobile Menu */}
+        <div className="ml-auto md:hidden">
           <Button
             variant="ghost"
             size="icon"
@@ -97,7 +84,7 @@ export const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden glass border-t border-border"
           >
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+            <div className="px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
