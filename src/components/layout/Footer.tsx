@@ -16,7 +16,7 @@ export const Footer = () => {
             whileInView={{ opacity: 1 }}
             className="text-sm text-muted-foreground text-center md:text-left"
           >
-            © {new Date().getFullYear()} Siddeshwar Madargave. Built with{" "}
+            © {new Date().getFullYear()} Aditya Patil. Built with{" "}
             <Heart className="inline h-4 w-4 text-destructive mx-1" /> using React
             & TailwindCSS
           </motion.p>

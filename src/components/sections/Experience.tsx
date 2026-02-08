@@ -5,29 +5,30 @@ import { Building2, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Full-Stack Engineer (Intern)",
-    company: "PaidCoders AI Labs LLP",
-    location: "Remote",
-    duration: "September 2025 – December 2025",
+    title: "Data Engineer (Intern)",
+    company: "Amazon",
+    location: "Bengaluru,India",
+    duration: "June 2025 – Decemeber 2025",
     description: [
-      "Developed scalable web applications using React.js and Node.js",
-      "Integrated RESTful APIs and third-party services",
-      "Implemented secure authentication systems with JWT and OAuth",
-      "Built production-ready frontend and backend features",
-      "Collaborated with cross-functional teams using Agile methodologies",
+      "Designed and implemented data pipelines to ingest, transform, and validate large-scale datasets",
+      "Worked with structured and semi-structured data to support analytics and reporting use cases",
+      "Developed ETL workflows using Python and SQL with a focus on reliability and performance",
+      "Integrated AWS services to build scalable and cost-efficient data solutions",
+      "Collaborated with engineers and stakeholders following Agile development practices",
     ],
-    technologies: ["React", "Node.js", "TypeScript", "MongoDB", "AWS"],
+    technologies: ["Java", "JavaScript", "CDK Pipeline","Python","SQL","AWS (S3, Glue, Lambda)","Git"],
   },
 ];
+
 
 const education = [
   {
     degree: "B.E. in Information Science and Engineering",
-    institution: "Dayananda Sagar College of Engineering",
+    institution: "Bangalore Institute of Technology",
     location: "Bangalore, India",
     duration: "2022 – 2026",
     description:
-      "Focusing on full-stack development, cloud computing, and AI/ML. Active participation in coding competitions and hackathons.",
+       "Focused on data engineering, full-stack development, and cloud computing, with hands-on experience through projects, hackathons, and competitive programming.",
   },
 ];
 

@@ -22,46 +22,52 @@ const projects = [
       "Real-time Firestore data handling",
       "Responsive and modern UI",
     ],
-    github: "https://github.com/siddeshwardm/E-commerce",
+    github: "https://github.com/adityapatil1625/E-commerce",
     live: "#",
     featured: true,
   },
   {
-    title: "Personal Budget Management System",
-    description:
-      "AI-powered personal finance app with receipt scanning and intelligent financial insights using Google Gemini.",
-    technologies: [
-      "React.js",
-      "TailwindCSS",
-      "Zustand",
-      "Node.js",
-      "MongoDB",
-      "Prisma",
-      "Google Gemini AI",
-    ],
-    features: [
-      "Secure user authentication",
-      "AI-powered receipt scanning",
-      "Interactive spending charts and analytics",
-    ],
-    github: "https://github.com/siddeshwardm/Budget_Manager",
-    live: "#",
-    featured: true,
-  },
-  {
-    title: "Firebase Authentication System",
-    description:
-      "A complete authentication solution with secure sign-in/sign-up workflows and comprehensive form validation.",
-    technologies: ["React.js", "Firebase", "Node.js"],
-    features: [
-      "Secure authentication workflows",
-      "Form validation best practices",
-      "User session management",
-    ],
-    github: "https://github.com/siddeshwardm/authentication-firebase",
-    live: "#",
-    featured: false,
-  },
+  title: "CricSim Pro",
+  description:
+    "Cricket match simulation and analytics platform that models match scenarios, player performance, and outcomes using real-world cricket logic.",
+  technologies: [
+    "React.js",
+    "JavaScript",
+    "TailwindCSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+  ],
+  features: [
+    "Simulates cricket matches with realistic rules and scoring logic",
+    "Player and team performance analytics",
+    "Dynamic match flow with ball-by-ball updates",
+  ],
+  github: "https://github.com/adityapatil1625/cricsim-pro",
+  live: "#",
+  featured: true,
+},
+{
+  title: "TARS-D AI Voice Assistant",
+  description:
+    "A voice-controlled assistant built with modern web technologies, enabling users to interact through natural language voice commands and receive intelligent responses.",
+  technologies: [
+    "JavaScript",
+    "Web Speech API",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Express.js"
+  ],
+  features: [
+    "Real-time speech recognition and voice command processing",
+    "Dynamic voice responses using speech synthesis",
+    "Contextual command handling for tasks like search and reminders"
+  ],
+  github: "https://github.com/adityapatil1625/AI-Voice-Assistant",
+  live: "#",
+  featured: true
+},
 ];
 
 export const Projects = () => {
@@ -168,7 +174,7 @@ export const Projects = () => {
           >
             <Button variant="outline" size="lg" asChild>
               <a
-                href="https://github.com/siddeshwardm"
+                href="https://github.com/adityapatil1625"
                 target="_blank"
                 rel="noopener noreferrer"
               >

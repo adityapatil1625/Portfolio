@@ -34,7 +34,7 @@ const skillCategories = [
   {
     title: "Cloud & Tools",
     skills: [
-      { name: "AWS", level: 70 },
+      { name: "AWS", level: 95 },
       { name: "Firebase", level: 85 },
       { name: "Git/GitHub", level: 90 },
       { name: "Linux", level: 75 },

@@ -33,7 +33,7 @@ export const Contact = () => {
           from_email: formData.get("email"),
           subject: formData.get("subject"),
           message: formData.get("message"),
-          to_email: "siddeshwarmadargave6@gmail.com",
+          to_email: "adityapatil1625@gmail.com",
         }
       );
 
@@ -59,8 +59,8 @@ export const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "siddeshwarmadargave6@gmail.com",
-      href: "mailto:siddeshwarmadargave6@gmail.com",
+      value: "adityapatil1625@gmail.com",
+      href: "mailto:adityapatil1625@gmail.com",
     },
     {
       icon: MapPin,
@@ -71,15 +71,15 @@ export const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 76765 95907",
-      href: "tel:+917676595907",
+      value: "+91 63637 21221",
+      href: "tel:+916363721221",
     },
   ];
 
   const socials = [
-    { icon: Github, href: "https://github.com/siddeshwardm?tab=repositories", label: "GitHub" },
-    { icon: Linkedin, href: "https://www.linkedin.com/in/siddeshwar-madargave-945092307/", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:siddeshwarmadargave6@gmail.com", label: "Email" },
+    { icon: Github, href: "https://github.com/adityapatil?tab=repositories", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/aditya-patil/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:adityapatil1625@gmail.com", label: "Email" },
   ];
 
   return (

@@ -33,7 +33,7 @@ export const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm <span className="text-primary font-semibold">Siddeshwar Madargave</span>, 
+                I'm <span className="text-primary font-semibold">Aditya Patil</span>, 
                 a passionate Full Stack Developer currently pursuing my B.Tech in Information Science 
                 and Engineering at Dayananda Sagar College of Engineering, Bangalore.
               </p>
@@ -77,7 +77,7 @@ export const About = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Focus</p>
-                    <p className="font-medium">Full Stack</p>
+                    <p className="font-medium">DevOps & Full Stack</p>
                   </div>
                 </div>
               </div>

@@ -42,9 +42,9 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            <span className="text-foreground">Siddeshwar</span>
+            <span className="text-foreground">Aditya</span>
             <br />
-            <span className="text-gradient">Madargave</span>
+            <span className="text-gradient">Patil</span>
           </motion.h1>
 
           <motion.div
@@ -99,7 +99,7 @@ export const Hero = () => {
             </Button>
 
             <Button variant="outline" size="lg" asChild>
-              <a href="/resume (2).pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Resume_Aditya%20(2).pdf" target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-5 w-5" />
                 Resume
               </a>
@@ -112,15 +112,15 @@ export const Hero = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="flex items-center justify-center gap-6"
           >
-            <motion.a href="https://github.com/siddeshwardm" target="_blank" className="text-muted-foreground hover:text-primary" whileHover={{ scale: 1.2 }}>
+            <motion.a href="https://github.com/adityapatil1625" target="_blank" className="text-muted-foreground hover:text-primary" whileHover={{ scale: 1.2 }}>
               <Github className="h-6 w-6" />
             </motion.a>
 
-            <motion.a href="https://www.linkedin.com/in/siddeshwar-madargave-945092307/" target="_blank" className="text-muted-foreground hover:text-primary" whileHover={{ scale: 1.2 }}>
+            <motion.a href="https://www.linkedin.com/in/aditya-patil-196723259/" target="_blank" className="text-muted-foreground hover:text-primary" whileHover={{ scale: 1.2 }}>
               <Linkedin className="h-6 w-6" />
             </motion.a>
 
-            <motion.a href="mailto:siddeshwarmadargave6@gmail.com" className="text-muted-foreground hover:text-primary" whileHover={{ scale: 1.2 }}>
+            <motion.a href="mailto:adityapatil1625@gmail.com" className="text-muted-foreground hover:text-primary" whileHover={{ scale: 1.2 }}>
               <Mail className="h-6 w-6" />
             </motion.a>
           </motion.div>
