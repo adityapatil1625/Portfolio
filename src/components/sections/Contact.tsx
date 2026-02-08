@@ -13,10 +13,13 @@ export const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const emailServiceId = "service_2ai5nsf";
+  const emailTemplateId = "template_wav00lk";
+  const emailPublicKey = "ut12dt2nL6eMOnPUb";
 
   useEffect(() => {
     // Initialize EmailJS with your public key
-    emailjs.init("qohcf0P70Vw8xHz70");
+    emailjs.init(emailPublicKey);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,15 +29,18 @@ export const Contact = () => {
     try {
       const formData = new FormData(e.currentTarget);
       const result = await emailjs.send(
-        "service_hfl5x73",
-        "template_m6peohq",
+        emailServiceId,
+        emailTemplateId,
         {
-          from_name: formData.get("name"),
-          from_email: formData.get("email"),
-          subject: formData.get("subject"),
-          message: formData.get("message"),
+          from_name: String(formData.get("name") || ""),
+          from_email: String(formData.get("email") || ""),
+          reply_to: String(formData.get("email") || ""),
+          subject: String(formData.get("subject") || ""),
+          message: String(formData.get("message") || ""),
+          to_name: "Aditya Patil",
           to_email: "adityapatil1625@gmail.com",
-        }
+        },
+        emailPublicKey
       );
 
       if (result.status === 200) {
@@ -45,9 +51,14 @@ export const Contact = () => {
         (e.target as HTMLFormElement).reset();
       }
     } catch (error) {
+      console.error("EmailJS error:", error);
+      const errorMessage =
+        typeof error === "object" && error && "text" in error
+          ? String((error as { text?: string }).text)
+          : "Failed to send message. Please try again or contact me directly.";
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again or contact me directly.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
