@@ -99,7 +99,7 @@ export const Hero = () => {
             </Button>
 
             <Button variant="outline" size="lg" asChild>
-              <a href="/Resume_Aditya%20(2).pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Aditya_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-5 w-5" />
                 Resume
               </a>
