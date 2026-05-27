@@ -5,6 +5,19 @@ import { Building2, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
+    title: "Full Stack Developer",
+    company: "AnugatAI (Internship)",
+    location: "Bengaluru, Karnataka",
+    duration: "April 2026 – May 2026",
+    description: [
+      "Developed and deployed the company’s main website with a responsive and modern UI, improving user experience and brand presence.",
+      "Built core frontend and backend modules for Samayak, an AI-powered academic management platform for colleges and professors.",
+      "Implemented timetable and classroom management features enabling efficient scheduling, faculty allocation, and academic workflow automation.",
+      "Integrated AI-driven timetable generation capabilities to automate schedule creation while reducing manual effort and conflicts.",
+    ],
+    technologies: ["React", "Node.js", "TypeScript", "Tailwind CSS", "AWS", "AI Integration"],
+  },
+  {
     title: "Data Engineer (Intern)",
     company: "Amazon",
     location: "Bengaluru,India",
